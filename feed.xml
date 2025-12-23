@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://ribatsua.github.io/cp25.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ribatsua.github.io/cp25.github.io/" rel="alternate" type="text/html" /><updated>2025-12-23T14:01:40+08:00</updated><id>https://ribatsua.github.io/cp25.github.io/feed.xml</id><title type="html">我的个人知识库</title><subtitle>记录技术学习和问题解决的个人知识库</subtitle><entry><title type="html">测试</title><link href="https://ribatsua.github.io/cp25.github.io/2025/12/23/%E6%B5%8B%E8%AF%95/" rel="alternate" type="text/html" title="测试" /><published>2025-12-23T00:00:00+08:00</published><updated>2025-12-23T00:00:00+08:00</updated><id>https://ribatsua.github.io/cp25.github.io/2025/12/23/%E6%B5%8B%E8%AF%95</id><content type="html" xml:base="https://ribatsua.github.io/cp25.github.io/2025/12/23/%E6%B5%8B%E8%AF%95/"><![CDATA[]]></content><author><name></name></author><category term="测试" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Markdown语法入门与实践</title><link href="https://ribatsua.github.io/cp25.github.io/2025/12/23/%E7%A4%BA%E4%BE%8B%E6%96%87%E7%AB%A0/" rel="alternate" type="text/html" title="Markdown语法入门与实践" /><published>2025-12-23T00:00:00+08:00</published><updated>2025-12-23T00:00:00+08:00</updated><id>https://ribatsua.github.io/cp25.github.io/2025/12/23/%E7%A4%BA%E4%BE%8B%E6%96%87%E7%AB%A0</id><content type="html" xml:base="https://ribatsua.github.io/cp25.github.io/2025/12/23/%E7%A4%BA%E4%BE%8B%E6%96%87%E7%AB%A0/"><![CDATA[<h1 id="markdown语法入门与实践">Markdown语法入门与实践</h1>
+
+<p>欢迎来到我的个人知识库！这是一篇关于Markdown语法的示例文章。</p>
+
+<!-- more -->
+
+<h2 id="一什么是markdown">一、什么是Markdown？</h2>
+
+<p>Markdown是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或HTML）文档。</p>
+
+<h2 id="二基本语法">二、基本语法</h2>
+
+<h3 id="1-标题">1. 标题</h3>
+
+<p>使用<code class="language-plaintext highlighter-rouge">#</code>号可以表示1-6级标题：</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># 一级标题</span>
+<span class="gu">## 二级标题</span>
+<span class="gu">### 三级标题</span>
+<span class="gu">#### 四级标题</span>
+<span class="gu">##### 五级标题</span>
+<span class="gu">###### 六级标题</span>
+</code></pre></div></div>
+
+<h3 id="2-段落与换行">2. 段落与换行</h3>
+
+<p>段落之间使用空行分隔。如果需要在段落内换行，可以在行尾添加两个或多个空格，然后回车。</p>
+
+<h3 id="3-强调">3. 强调</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ge">*斜体文本*</span>
+<span class="gs">**粗体文本**</span>
+<span class="ges">***粗斜体文本***</span>
+</code></pre></div></div>
+
+<p><em>斜体文本</em>
+<strong>粗体文本</strong>
+<strong><em>粗斜体文本</em></strong></p>
+
+<h3 id="4-列表">4. 列表</h3>
+
+<h4 id="无序列表">无序列表</h4>
+
+<p>使用<code class="language-plaintext highlighter-rouge">*</code>、<code class="language-plaintext highlighter-rouge">+</code>或<code class="language-plaintext highlighter-rouge">-</code>作为列表标记：</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">*</span> 列表项1
+<span class="p">*</span> 列表项2
+<span class="p">  *</span> 子列表项2.1
+<span class="p">  *</span> 子列表项2.2
+</code></pre></div></div>
+
+<ul>
+  <li>列表项1</li>
+  <li>列表项2
+    <ul>
+      <li>子列表项2.1</li>
+      <li>子列表项2.2</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="有序列表">有序列表</h4>
+
+<p>使用数字加<code class="language-plaintext highlighter-rouge">.</code>作为列表标记：</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">1.</span> 第一步
+<span class="p">2.</span> 第二步
+<span class="p">   1.</span> 子步骤2.1
+<span class="p">   2.</span> 子步骤2.2
+</code></pre></div></div>
+
+<ol>
+  <li>第一步</li>
+  <li>第二步
+    <ol>
+      <li>子步骤2.1</li>
+      <li>子步骤2.2</li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="5-代码">5. 代码</h3>
+
+<h4 id="行内代码">行内代码</h4>
+
+<p>使用反引号(`)包裹代码：</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>使用<span class="sb">`npm install`</span>命令安装依赖。
+</code></pre></div></div>
+
+<p>使用<code class="language-plaintext highlighter-rouge">npm install</code>命令安装依赖。</p>
+
+<h4 id="代码块">代码块</h4>
+
+<p>使用三个反引号(```)包裹代码块，并可以指定语言：</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">hello</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hello, World!</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nf">hello</span><span class="p">();</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Hello, World!</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="nf">hello</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="6-链接">6. 链接</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="nv">链接文本</span><span class="p">](</span><span class="sx">链接地址</span> <span class="nn">"链接标题"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><a href="https://github.com" title="GitHub官网">GitHub</a></p>
+
+<h3 id="7-图片">7. 图片</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">图片描述</span><span class="p">](</span><span class="sx">图片地址</span> <span class="nn">"图片标题"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="https://picsum.photos/800/400" alt="示例图片" title="这是一张示例图片" /></p>
+
+<h3 id="8-表格">8. 表格</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| 表头1 | 表头2 | 表头3 |
+|------|------|------|
+| 内容1 | 内容2 | 内容3 |
+| 内容4 | 内容5 | 内容6 |
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>表头1</th>
+      <th>表头2</th>
+      <th>表头3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>内容1</td>
+      <td>内容2</td>
+      <td>内容3</td>
+    </tr>
+    <tr>
+      <td>内容4</td>
+      <td>内容5</td>
+      <td>内容6</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="三高级用法">三、高级用法</h2>
+
+<h3 id="1-引用">1. 引用</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; 这是一段引用文本。</span>
+<span class="gt">&gt; </span>
+<span class="gt">&gt; &gt; 这是嵌套引用。</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>这是一段引用文本。</p>
+
+  <blockquote>
+    <p>这是嵌套引用。</p>
+  </blockquote>
+</blockquote>
+
+<h3 id="2-分割线">2. 分割线</h3>
+
+<p>使用三个或更多的<code class="language-plaintext highlighter-rouge">*</code>、<code class="language-plaintext highlighter-rouge">-</code>或<code class="language-plaintext highlighter-rouge">_</code>：</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">***
+---
+</span><span class="ge">__</span>_
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="3-任务列表">3. 任务列表</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">-</span> [x] 已完成的任务
+<span class="p">-</span> [ ] 未完成的任务
+<span class="p">-</span> [ ] 待处理的任务
+</code></pre></div></div>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />已完成的任务</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />未完成的任务</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />待处理的任务</li>
+</ul>
+
+<h2 id="四总结">四、总结</h2>
+
+<p>Markdown是一种简单易用的标记语言，非常适合用于写作、文档编写和内容创作。通过掌握这些基本语法，你可以轻松地创建格式化的文档。</p>
+
+<p>希望这篇文章对你有所帮助！如果你有任何问题或建议，欢迎留言讨论。</p>]]></content><author><name></name></author><category term="Markdown" /><category term="语法" /><category term="教程" /><summary type="html"><![CDATA[Markdown语法入门与实践 欢迎来到我的个人知识库！这是一篇关于Markdown语法的示例文章。]]></summary></entry></feed>

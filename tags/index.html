@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签</title>
+    
+    <!-- 引入外部资源 -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=SF+Pro+Display:wght@300;400;500;600;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    
+    <!-- 本地资源 -->
+    <link rel="stylesheet" href="/cp25.github.io/assets/css/main.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/cp25.github.io/" class="navbar-brand">
+                <i class="fas fa-book"></i>
+                我的个人知识库
+            </a>
+            
+            <!-- 桌面端导航菜单 -->
+            <ul class="navbar-nav">
+                
+                <li class="nav-item">
+                    <a href="/cp25.github.io/" class="nav-link">首页</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/cp25.github.io/archive/" class="nav-link">归档</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/cp25.github.io/tags/" class="nav-link">标签</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/cp25.github.io/about/" class="nav-link">关于</a>
+                </li>
+                
+            </ul>
+            
+            <!-- 移动端菜单按钮 -->
+            <button class="navbar-toggle" id="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- 功能按钮 -->
+            <div class="navbar-actions">
+                <!-- 主题切换按钮 -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="切换主题">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <!-- 搜索按钮 -->
+                <button class="search-toggle" id="search-toggle" aria-label="搜索">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <ul class="navbar-nav-mobile" id="navbar-nav-mobile">
+            
+            <li class="nav-item">
+                <a href="/cp25.github.io/" class="nav-link">首页</a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="/cp25.github.io/archive/" class="nav-link">归档</a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="/cp25.github.io/tags/" class="nav-link">标签</a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="/cp25.github.io/about/" class="nav-link">关于</a>
+            </li>
+            
+        </ul>
+    </nav>
+    
+    <!-- 搜索框 -->
+    <div class="search-container" id="search-container">
+        <div class="search-overlay" id="search-overlay"></div>
+        <div class="search-box">
+            <input type="text" class="search-input" id="search-input" placeholder="搜索文章...">
+            <button class="search-close" id="search-close" aria-label="关闭搜索">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- 主内容区域 -->
+    <main class="main">
+        <div class="container">
+            <!-- 标签页面内容 -->
+<div class="tags-container">
+    <!-- 页面标题 -->
+    <header class="tags-header">
+        <h1 class="tags-title">
+            <i class="fas fa-tags"></i>
+            标签云
+        </h1>
+        <p class="tags-subtitle">按标签浏览文章内容</p>
+    </header>
+    
+    <!-- 搜索框 -->
+    <div class="search-container">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="搜索标签或文章...">
+        </div>
+    </div>
+    
+    <!-- 标签云 -->
+    <div class="tags-cloud">
+        <div class="tags-list">
+            
+            
+            
+            
+            <a href="#tag-Markdown" class="tag-item" data-tag="Markdown">
+                #Markdown
+                <span class="tag-count">(1)</span>
+            </a>
+            
+            <a href="#tag-教程" class="tag-item" data-tag="教程">
+                #教程
+                <span class="tag-count">(1)</span>
+            </a>
+            
+            <a href="#tag-测试" class="tag-item" data-tag="测试">
+                #测试
+                <span class="tag-count">(1)</span>
+            </a>
+            
+            <a href="#tag-语法" class="tag-item" data-tag="语法">
+                #语法
+                <span class="tag-count">(1)</span>
+            </a>
+            
+        </div>
+    </div>
+    
+    <!-- 按标签分类的文章列表 -->
+    <div class="tagged-posts" id="tagged-posts">
+        
+        <div id="tag-Markdown" class="tag-section" data-tag="Markdown">
+            <h2 class="tag-section-title">
+                <i class="fas fa-hashtag"></i>
+                Markdown
+                <span class="tag-posts-count">(1)</span>
+            </h2>
+            
+            <div class="tag-posts-list">
+                
+                <article class="post-item">
+                    <a href="/cp25.github.io/2025/12/23/%E7%A4%BA%E4%BE%8B%E6%96%87%E7%AB%A0/" class="post-link">
+                        <div class="post-item-content">
+                            <h3 class="post-item-title">Markdown语法入门与实践</h3>
+                            <div class="post-item-meta">
+                                <span class="post-item-date">
+                                    <i class="far fa-calendar"></i>
+                                    2025年12月23日
+                                </span>
+                                <div class="post-item-tags">
+                                    
+                                    <span class="post-item-tag">#Markdown</span>
+                                    
+                                    <span class="post-item-tag">#语法</span>
+                                    
+                                    <span class="post-item-tag">#教程</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="post-item-excerpt">
+                                Markdown语法入门与实践
+
+欢迎来到我的个人知识库！这是一篇关于Markdown语法的示例文章。
+
+
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+            </div>
+        </div>
+        
+        <div id="tag-教程" class="tag-section" data-tag="教程">
+            <h2 class="tag-section-title">
+                <i class="fas fa-hashtag"></i>
+                教程
+                <span class="tag-posts-count">(1)</span>
+            </h2>
+            
+            <div class="tag-posts-list">
+                
+                <article class="post-item">
+                    <a href="/cp25.github.io/2025/12/23/%E7%A4%BA%E4%BE%8B%E6%96%87%E7%AB%A0/" class="post-link">
+                        <div class="post-item-content">
+                            <h3 class="post-item-title">Markdown语法入门与实践</h3>
+                            <div class="post-item-meta">
+                                <span class="post-item-date">
+                                    <i class="far fa-calendar"></i>
+                                    2025年12月23日
+                                </span>
+                                <div class="post-item-tags">
+                                    
+                                    <span class="post-item-tag">#Markdown</span>
+                                    
+                                    <span class="post-item-tag">#语法</span>
+                                    
+                                    <span class="post-item-tag">#教程</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="post-item-excerpt">
+                                Markdown语法入门与实践
+
+欢迎来到我的个人知识库！这是一篇关于Markdown语法的示例文章。
+
+
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+            </div>
+        </div>
+        
+        <div id="tag-测试" class="tag-section" data-tag="测试">
+            <h2 class="tag-section-title">
+                <i class="fas fa-hashtag"></i>
+                测试
+                <span class="tag-posts-count">(1)</span>
+            </h2>
+            
+            <div class="tag-posts-list">
+                
+                <article class="post-item">
+                    <a href="/cp25.github.io/2025/12/23/%E6%B5%8B%E8%AF%95/" class="post-link">
+                        <div class="post-item-content">
+                            <h3 class="post-item-title">测试</h3>
+                            <div class="post-item-meta">
+                                <span class="post-item-date">
+                                    <i class="far fa-calendar"></i>
+                                    2025年12月23日
+                                </span>
+                                <div class="post-item-tags">
+                                    
+                                    <span class="post-item-tag">#测试</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="post-item-excerpt">
+                                
+
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+            </div>
+        </div>
+        
+        <div id="tag-语法" class="tag-section" data-tag="语法">
+            <h2 class="tag-section-title">
+                <i class="fas fa-hashtag"></i>
+                语法
+                <span class="tag-posts-count">(1)</span>
+            </h2>
+            
+            <div class="tag-posts-list">
+                
+                <article class="post-item">
+                    <a href="/cp25.github.io/2025/12/23/%E7%A4%BA%E4%BE%8B%E6%96%87%E7%AB%A0/" class="post-link">
+                        <div class="post-item-content">
+                            <h3 class="post-item-title">Markdown语法入门与实践</h3>
+                            <div class="post-item-meta">
+                                <span class="post-item-date">
+                                    <i class="far fa-calendar"></i>
+                                    2025年12月23日
+                                </span>
+                                <div class="post-item-tags">
+                                    
+                                    <span class="post-item-tag">#Markdown</span>
+                                    
+                                    <span class="post-item-tag">#语法</span>
+                                    
+                                    <span class="post-item-tag">#教程</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="post-item-excerpt">
+                                Markdown语法入门与实践
+
+欢迎来到我的个人知识库！这是一篇关于Markdown语法的示例文章。
+
+
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2025 我的个人知识库</p>
+                    <p>记录技术学习和问题解决的个人知识库</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 回到顶部按钮 -->
+    <button class="back-to-top" id="back-to-top" aria-label="回到顶部">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- 本地JavaScript -->
+    <script src="/cp25.github.io/assets/js/main.js"></script>
+</body>
+</html>
