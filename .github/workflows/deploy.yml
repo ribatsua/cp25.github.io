@@ -1,0 +1,34 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]  # 监听main分支的push事件
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest  # 使用Ubuntu环境
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # 检出代码
+        with:
+          fetch-depth: 0  # 确保获取完整的提交历史
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1  # 设置Ruby环境
+        with:
+          ruby-version: '3.1'  # 指定Ruby版本
+          bundler-cache: true  # 启用Bundler缓存
+
+      - name: Install dependencies
+        run: bundle install  # 安装依赖
+
+      - name: Build site
+        run: bundle exec jekyll build  # 构建网站，生成_site目录
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3  # 使用GitHub Pages部署工具
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用GitHub提供的令牌
+          publish_dir: ./_site  # 部署_site目录的内容
+          publish_branch: gh-pages  # 部署到gh-pages分支
+          force_orphan: true  # 强制创建孤立分支

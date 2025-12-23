@@ -1,0 +1,24 @@
+# 统一管理换行符，解决跨平台差异问题
+
+# 文本文件统一使用LF换行符
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.rb text eol=lf
+*.txt text eol=lf
+
+# 二进制文件保持原样
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary
+*.pdf binary
+
+# 保留Windows特定的文件格式
+*.bat text eol=crlf
+*.cmd text eol=crlf
