@@ -3,8 +3,8 @@
 # 网站基本信息
 name: "我的个人知识库"
 description: "记录技术学习和问题解决的个人知识库"
-url: "https://cp25.github.io" # 替换为你的GitHub Pages URL
-baseurl: "" # 如果网站部署在子目录，填写子目录名称
+url: "https://ribatsua.github.io" # GitHub用户名.github.io
+baseurl: "/cp25.github.io" # 仓库名称作为子目录
 
 # 构建配置
 host: 0.0.0.0
