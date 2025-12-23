@@ -1,0 +1,82 @@
+---
+layout: default
+title: 标签
+---
+
+<!-- 标签页面内容 -->
+<div class="tags-container">
+    <!-- 页面标题 -->
+    <header class="tags-header">
+        <h1 class="tags-title">
+            <i class="fas fa-tags"></i>
+            标签云
+        </h1>
+        <p class="tags-subtitle">按标签浏览文章内容</p>
+    </header>
+    
+    <!-- 搜索框 -->
+    <div class="search-container">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="搜索标签或文章...">
+        </div>
+    </div>
+    
+    <!-- 标签云 -->
+    <div class="tags-cloud">
+        <div class="tags-list">
+            {% capture tags %}
+                {% for tag in site.tags %}
+                    {{ tag[0] }}
+                {% endfor %}
+            {% endcapture %}
+            {% assign sorted_tags = tags | split: ' ' | sort %}
+            
+            {% for tag in sorted_tags %}
+            <a href="#tag-{{ tag }}" class="tag-item" data-tag="{{ tag }}">
+                #{{ tag }}
+                <span class="tag-count">({{ site.tags[tag].size }})</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <!-- 按标签分类的文章列表 -->
+    <div class="tagged-posts" id="tagged-posts">
+        {% for tag in sorted_tags %}
+        <div id="tag-{{ tag }}" class="tag-section" data-tag="{{ tag }}">
+            <h2 class="tag-section-title">
+                <i class="fas fa-hashtag"></i>
+                {{ tag }}
+                <span class="tag-posts-count">({{ site.tags[tag].size }})</span>
+            </h2>
+            
+            <div class="tag-posts-list">
+                {% for post in site.tags[tag] %}
+                <article class="post-item">
+                    <a href="{{ post.url | relative_url }}" class="post-link">
+                        <div class="post-item-content">
+                            <h3 class="post-item-title">{{ post.title }}</h3>
+                            <div class="post-item-meta">
+                                <span class="post-item-date">
+                                    <i class="far fa-calendar"></i>
+                                    {{ post.date | date: '%Y年%m月%d日' }}
+                                </span>
+                                <div class="post-item-tags">
+                                    {% for post_tag in post.tags %}
+                                    <span class="post-item-tag">#{{ post_tag }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="post-item-excerpt">
+                                {{ post.excerpt | strip_html | truncate: 100 }}
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

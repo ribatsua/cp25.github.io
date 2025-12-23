@@ -1,0 +1,67 @@
+---
+layout: default
+title: 归档
+---
+
+<!-- 归档页面内容 -->
+<div class="archive-container">
+    <!-- 页面标题 -->
+    <header class="archive-header">
+        <h1 class="archive-title">
+            <i class="fas fa-archive"></i>
+            文章归档
+        </h1>
+        <p class="archive-subtitle">记录所有技术学习和问题解决的文章</p>
+    </header>
+    
+    <!-- 搜索框 -->
+    <div class="search-container">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="搜索文章...">
+        </div>
+    </div>
+    
+    <!-- 归档列表 -->
+    <div class="archive-list" id="archive-list">
+        {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+        {% for year in posts_by_year %}
+        <div class="archive-year">
+            <h2 class="year-title">{{ year.name }}</h2>
+            
+            {% assign posts_by_month = year.items | group_by_exp: "post", "post.date | date: '%m'" %}
+            {% for month in posts_by_month %}
+            <div class="archive-month">
+                <h3 class="month-title">
+                    {% case month.name %}
+                        {% when '01' %}一月
+                        {% when '02' %}二月
+                        {% when '03' %}三月
+                        {% when '04' %}四月
+                        {% when '05' %}五月
+                        {% when '06' %}六月
+                        {% when '07' %}七月
+                        {% when '08' %}八月
+                        {% when '09' %}九月
+                        {% when '10' %}十月
+                        {% when '11' %}十一月
+                        {% when '12' %}十二月
+                    {% endcase %}
+                </h3>
+                
+                <ul class="month-posts">
+                    {% for post in month.items %}
+                    <li class="post-item" data-tags="{{ post.tags | join: ' ' }}">
+                        <a href="{{ post.url | relative_url }}" class="post-link">
+                            <span class="post-title">{{ post.title }}</span>
+                            <span class="post-date">{{ post.date | date: '%d日' }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
